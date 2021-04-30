@@ -1,0 +1,5 @@
+package com.igualitarie.ecommerce.model;
+
+public class Categoria {
+
+}
