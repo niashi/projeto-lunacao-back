@@ -17,7 +17,7 @@ public class Categoria {
 	private long id;
 	
 	@NotNull
-	@Size(min = 10, max = 500)
+	@Size(min = 5, max = 500)
 	private String descricao;
 	
 	@NotNull
