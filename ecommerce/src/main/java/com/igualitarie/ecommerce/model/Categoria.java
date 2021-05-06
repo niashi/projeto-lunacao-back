@@ -1,12 +1,17 @@
 package com.igualitarie.ecommerce.model;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "tb_categoria")
@@ -17,11 +22,15 @@ public class Categoria {
 	private long id;
 	
 	@NotNull
-	@Size(min = 10, max = 500)
+	
 	private String descricao;
 	
 	@NotNull
 	private boolean reut_descart;
+	
+	@OneToMany(mappedBy = "categoria" , cascade = CascadeType.ALL)
+	@JsonIgnoreProperties("categoria")
+	private List<Produto> produto;
 
 	public long getId() {
 		return id;
@@ -45,5 +54,13 @@ public class Categoria {
 
 	public void setReut_descart(boolean reut_descart) {
 		this.reut_descart = reut_descart;
+	}
+
+	public List<Produto> getProduto() {
+		return produto;
+	}
+
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
 	}
 }
