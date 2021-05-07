@@ -21,8 +21,7 @@ public class Categoria {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull
-	
+	@NotNull	
 	private String descricao;
 	
 	@NotNull
