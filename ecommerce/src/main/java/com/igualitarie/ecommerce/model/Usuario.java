@@ -19,7 +19,7 @@ public class Usuario {
 	private String nome;
 	
 	@NotNull
-	private String email;
+	private String usuario;
 	
 	@NotNull
 	private String senha;
@@ -40,12 +40,12 @@ public class Usuario {
 		this.nome = nome;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getUsuario() {
+		return usuario;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setUsuario(String usuario) {
+		this.usuario = usuario;
 	}
 
 	public String getSenha() {
