@@ -1,35 +1,36 @@
 package com.igualitarie.ecommerce.model;
 
-import java.util.List;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "tb_categoria")
-public class Categoria {
+@Table(name = "tb_produto")
+public class Produto {
+	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotNull	
+	@NotNull
+	private String nome;
+	
+	@NotNull
 	private String descricao;
 	
 	@NotNull
-	private boolean reut_descart;
+	private boolean doado;
 	
-	@OneToMany(mappedBy = "categoria" , cascade = CascadeType.ALL)
-	@JsonIgnoreProperties("categoria")
-	private List<Produto> produto;
+	@ManyToOne
+	@JsonIgnoreProperties("produto")
+	private Categoria categoria;
 
 	public long getId() {
 		return id;
@@ -37,6 +38,14 @@ public class Categoria {
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
 	}
 
 	public String getDescricao() {
@@ -47,19 +56,21 @@ public class Categoria {
 		this.descricao = descricao;
 	}
 
-	public boolean isReut_descart() {
-		return reut_descart;
+	public boolean isDoado() {
+		return doado;
 	}
 
-	public void setReut_descart(boolean reut_descart) {
-		this.reut_descart = reut_descart;
+	public void setDoado(boolean doado) {
+		this.doado = doado;
 	}
 
-	public List<Produto> getProduto() {
-		return produto;
+	public Categoria getCategoria() {
+		return categoria;
 	}
 
-	public void setProduto(List<Produto> produto) {
-		this.produto = produto;
+	public void setCategoria(Categoria categoria) {
+		this.categoria = categoria;
 	}
+
+	
 }
