@@ -1,6 +1,8 @@
 package com.igualitarie.ecommerce.model;
 
 public class UsuarioLogin {
+	
+	private long id;
 
 	private String nome;
 
@@ -14,6 +16,17 @@ public class UsuarioLogin {
 	
 	private String tipo;
 	
+
+	
+	
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public String getNome() {
 		return nome;
