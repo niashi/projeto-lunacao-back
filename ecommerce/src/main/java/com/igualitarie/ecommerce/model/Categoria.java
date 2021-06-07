@@ -24,8 +24,8 @@ public class Categoria {
 	@NotNull	
 	private String descricao;
 	
-	@NotNull
-	private boolean reut_descart;
+	//@NotNull
+	//private boolean reut_descart;
 	
 	@OneToMany(mappedBy = "categoria" , cascade = CascadeType.ALL)
 	@JsonIgnoreProperties("categoria")
@@ -47,13 +47,13 @@ public class Categoria {
 		this.descricao = descricao;
 	}
 
-	public boolean isReut_descart() {
+	/*public boolean isReut_descart() {
 		return reut_descart;
 	}
 
 	public void setReut_descart(boolean reut_descart) {
 		this.reut_descart = reut_descart;
-	}
+	}*/
 
 	public List<Produto> getProduto() {
 		return produto;
