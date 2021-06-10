@@ -30,10 +30,6 @@ public class UsuarioController {
 	@Autowired
     private UsuarioRepository repository;
 
-   @GetMapping("/{id}")
-    public ResponseEntity<Usuario> GetById(@PathVariable long id) {
-        return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
-    }
 
 	@PostMapping("/cadastrar")
 	public ResponseEntity<Usuario> Post(@RequestBody Usuario usuario) {
@@ -45,6 +41,11 @@ public class UsuarioController {
 		}
 
 	}
+	
+	@GetMapping("/{id}")
+    public ResponseEntity<Usuario> GetById(@PathVariable long id) {
+        return repository.findById(id).map(resp -> ResponseEntity.ok(resp)).orElse(ResponseEntity.notFound().build());
+    }
 
 	@PostMapping("/logar")
 	public ResponseEntity<UsuarioLogin> Autentication(@RequestBody Optional<UsuarioLogin> user) {
