@@ -7,9 +7,9 @@ Nosso projeto é baseado no Objetivo de Desenvolvimento Sustentável 5 da [ONU -
 O e-commerce Lunação tem como proposta o combate à pobreza menstrual, tendo em vista que esse problema reforça a desigualdade de gênero, privando pessoas menstruantes do acesso à educação, trabalho e dignidade.
 Nosso objetivo principal é levar itens de higiene menstrual providos por pessoas e empresas doadoras até pessoas menstruantes em situação econômica vulnerável. 
 
-O projeto também conta com uma páginad de educativo, que traz mais informações acerca dos impactos causados pela pobreza menstrual no nosso país, explicitando  que esses impactos atingem não apenas mulheres cisgêneras, mas também pessoas trans menstruantes. Essa página também conta com cards de ilustração feitos por um ilustrador trans não binário, [Nimbus Aragón](https://www.instagram.com/nimbusviridis/). Nimbus criou uma coleção de ilustrações explicativas sobre identidade gênero, estereótipos sociais e corporeidade.
+O projeto também conta com uma página de educativo, que traz mais informações acerca dos impactos causados pela pobreza menstrual no nosso país, explicitando  que esses impactos atingem não apenas mulheres cisgêneras, mas também pessoas trans menstruantes. Essa página também conta com cards de ilustração feitos por um ilustrador trans não binário, [Nimbus Aragón](https://www.instagram.com/nimbusviridis/  "@nimbusviridis"). Nimbus criou uma coleção de ilustrações explicativas sobre identidade gênero, estereótipos sociais e corporeidade.
 
-
+[Front-end](https://github.com/Niashi/projeto-lunacao-front/ "Front-end") do projeto
 
 ## Funcionalidades da Aplicação
 
@@ -57,4 +57,3 @@ Usuário administrador
 
 
 acesse a versão 1.0 do nosso projeto: https://lunacao.netlify.app/
-acesse o código front-end do nosso projeto: https://github.com/Niashi/projeto-lunacao-front/
